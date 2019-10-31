@@ -163,18 +163,21 @@ class SupportTracker:
 
 
 
-channel_name = "platform-ds-slack-workflow-test"
-user_name = 'Request Manager'
-max_date = datetime(2019, 10, 31)
-min_date = max_date - timedelta(1)
+if __name__ == "__main__":
+    channel_name = "platform-ds-slack-workflow-test"
+    user_name = 'Request Manager'
+    csv_file = "support_track.csv"
 
-SLACK_API_KEY_FILE = os.environ["HOME"] + "/creds/slack-API-Key.txt"
-with open(SLACK_API_KEY_FILE, "r") as f:
-    os.environ["SLACK_API_KEY"] = f.read()[:-1]
+    max_date = datetime(2019, 10, 31)
+    min_date = max_date - timedelta(1)
 
-st = SupportTracker()
-# print(st._get_user_id_workflow(user_name))
-print(st.get_messages(channel_name, min_date, max_date).iloc[0, :])
+    SLACK_API_KEY_FILE = os.environ["HOME"] + "/creds/slack-API-Key.txt"
+    with open(SLACK_API_KEY_FILE, "r") as f:
+        os.environ["SLACK_API_KEY"] = f.read()[:-1]
+
+    st = SupportTracker()
+    df = st.get_messages(channel_name, min_date, max_date)
+    df.to_csv(csv_file)
 
 
 
