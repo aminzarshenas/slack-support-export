@@ -10,12 +10,12 @@ specific massages and fields from those messages.
 
 supporttracker client
 =========================
-.. autoclass:: supporttracker.client.SlackClient
+.. autoclass:: supporttracker.client.SlackClient.SlackClient
    :members:
 
 supporttracker extractor
 =========================
-.. autoclass:: supporttracker.extractor.SupportExtractor
+.. autoclass:: supporttracker.extractor.SupportExtractor.SupportExtractor
    :members:
 
 
