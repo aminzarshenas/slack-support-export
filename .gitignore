@@ -1,1 +1,5 @@
 *.csv
+
+_build
+_static
+_templates
