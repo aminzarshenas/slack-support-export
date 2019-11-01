@@ -10,12 +10,7 @@ with open('version.txt', 'r') as version_file:
 #########################
 
 documentation_packages = [
-    'sphinx',
-    'sphinxcontrib-napoleon',
-    'sphinx_autodoc_typehints',
-    'sphinxcontrib-programoutput',
-    'sphinxcontrib-websupport',
-    'nbsphinx'
+    'sphinx'
 ]
 regular_packages = [
     'pandas>=0.24.0',
