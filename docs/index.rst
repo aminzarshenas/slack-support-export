@@ -1,24 +1,21 @@
 supporttracker's documentation
 ==========================================
 
+supporttracker is a Python package that can be used to read messages from Slack and extract
+specific massages and fields from those messages.
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
 supporttracker client
 =========================
-.. automodule:: supporttracker.client.SlackClient
+.. autoclass:: supporttracker.client.SlackClient
    :members:
 
 supporttracker extractor
 =========================
-.. automodule:: supporttracker.extractor.SupportExtractor
+.. autoclass:: supporttracker.extractor.SupportExtractor
    :members:
 
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
