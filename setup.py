@@ -1,0 +1,39 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from setuptools import find_packages
+from setuptools import setup
+
+# -- PACKAGE VERSION -- #
+with open('version.txt', 'r') as version_file:
+    current_version = version_file.read().rstrip()
+#########################
+
+documentation_packages = [
+    'sphinx',
+    'sphinxcontrib-napoleon',
+    'sphinx_autodoc_typehints',
+    'sphinxcontrib-programoutput',
+    'sphinxcontrib-websupport',
+    'nbsphinx'
+]
+regular_packages = [
+    'pandas>=0.24.0',
+    'slacker'
+]
+
+setup(
+    name='supporttracker',
+    python_requires='>=3.0.0',
+    version=current_version,
+    description='Tracker for Slack support requests',
+    author='Amin Zarshenas',
+    author_email='amin.zarshenas@gmail.com',
+    packages=find_packages(),
+    install_requires=[regular_packages],
+    include_package_data=True,
+    extras_require={
+        'all': regular_packages + documentation_packages,
+        'doc': documentation_packages
+    }
+)
