@@ -2,7 +2,3 @@
 *.pyc
 
 __pycache__
-
-_build
-_static
-_templates
