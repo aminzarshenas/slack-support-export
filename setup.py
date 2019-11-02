@@ -13,7 +13,7 @@ documentation_packages = [
     'sphinx'
 ]
 regular_packages = [
-    'pandas,
+    'pandas',
     'slacker'
 ]
 
