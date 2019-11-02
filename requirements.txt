@@ -1,0 +1,4 @@
+sphinx-gallery
+pandas>=0.24.0
+Sphinx==1.5.3
+slacker
