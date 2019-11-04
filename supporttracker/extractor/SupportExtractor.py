@@ -30,8 +30,10 @@ class SupportExtractor:
             parsed = self._parse_request(msg)
             parsed["date_time"] = msg["date_time"]
             parsed["link"] = msg["permalink"]
-            parsed["response_date"] = self._find_first_response(msg, messages)["date_time"]
             parsed["resolved_date"] = None
+            first_response = self._find_first_response(msg, messages)
+            if first_response:
+                parsed["response_date"] = first_response["date_time"]
             parsed = {k:[parsed[k]] for k in parsed.keys()}
             df = pd.concat([df, pd.DataFrame(parsed)])
             i = i + 1

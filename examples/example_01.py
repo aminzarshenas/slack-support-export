@@ -21,7 +21,7 @@ if __name__ == "__main__":
     csv_file = "./example_01_support_requests.csv"
 
     # dates we are interested to read the supports from
-    max_date = datetime(2019, 11, 2)
+    max_date = datetime(2019, 11, 3)
     min_date = max_date - timedelta(2)
 
     # get all of the messages for that specific date range
