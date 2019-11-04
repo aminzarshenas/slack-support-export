@@ -5,7 +5,7 @@ from setuptools import find_packages
 from setuptools import setup
 
 # -- PACKAGE VERSION -- #
-current_version = "1.0.2"
+current_version = "1.1.0"
 #########################
 
 documentation_packages = [

@@ -1,22 +1,29 @@
-platform_ds_request_template = {
+platform_ds_request_template_main = {
+    "category": {
+        "start": "Request -",
+        "end": "\* \<\!subteam"
+    },
     "urgency": {
         "start": "circle:",
-        "end": ":speech_balloon:"
-    },
-    "request": {
-        "start": "\*Request:\*",
-        "end": ":woman-raising-hand:"
-    },
+        "end": ""
+    }
+}
+
+platform_ds_request_template_thread = {
     "user": {
         "start": "\*From:\*",
-        "end": ":computer:"
-    },
-    "category": {
-        "start": "\*Category:\*",
         "end": ":house:"
     },
     "tenant": {
         "start": "\*Tenant:\*",
+        "end": ":hacker:"
+    },
+    "code": {
+        "start": "\*Code or link to code:\*",
+        "end": ":error:"
+    },
+    "log": {
+        "start": "\*Error logs or link to error logs:\*",
         "end": ":python:"
     },
     "language": {
@@ -25,24 +32,13 @@ platform_ds_request_template = {
     },
     "library": {
         "start": "\*Specific library used:\*",
-        "end": ":hacker::link:"
+        "end": ":speech_balloon:"
     },
-    "code_link": {
-        "start": "\*Link to the code:\*",
-        "end": ":hacker:"
-    },
-    "code": {
-        "start": "\*Code:\*",
-        "end": ":error::link:"
-    },
-    "log_link": {
-        "start": "\*Link to the error logs:\*",
-        "end": ":error:"
-    },
-    "log": {
-        "start": "\*Error logs:\*",
+    "request": {
+        "start": "\*Request:\*",
         "end": ""
     }
 }
+
 
 

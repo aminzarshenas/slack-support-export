@@ -43,7 +43,7 @@ class SlackClient:
         messages = [self._parse_message(m) for m in messages]
         messages = pd.DataFrame(messages)
         messages = messages[["date_time", "iid", "username", "permalink", "text"]]
-        messages = messages.drop_duplicates(["username", "date_time"])
+        messages = messages.drop_duplicates(["username", "date_time", "text"])
         logging.info(f"Done pulling the messages.")
         return messages
 
