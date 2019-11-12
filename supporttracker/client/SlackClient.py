@@ -133,10 +133,10 @@ class SlackClient:
 
         :return: return a list of dicts of messages and their fields
         """
-        page = self._MAX_PAGE
+        page = 0
         messages = []
         stop = False
-        while page >= 0 and not stop:
+        while page <= self._MAX_PAGE and not stop:
             res = self._get_one_page_messages(channel_name, page, self._MAX_PAGE_SIZE)
             if res:
                 for msg in res:
@@ -146,7 +146,7 @@ class SlackClient:
                         break
                     if t >= min_date and t < max_date:
                         messages.append(msg)
-            page = page - 1
+            page += 1
 
         messages.reverse()
         return messages
