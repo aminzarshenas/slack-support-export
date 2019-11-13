@@ -12,21 +12,18 @@ from supporttracker.utils.utils import extract_user_id
 if __name__ == "__main__":
 
     # set API keys
-    SLACK_API_KEY_FILE = os.environ["HOME"] + "/creds/slack-API-Key.txt"
-    with open(SLACK_API_KEY_FILE, "r") as f:
-        os.environ["SLACK_API_KEY"] = f.read()[:-1]
+    os.environ["SLACK_API_KEY"] = os.environ["SLACK_TOKEN"]
 
     # channel name, request manager name, and the file to save the results
-    channel_name = "platform-ds-slack-workflow-test"
+    channel_name = "platform-ds"
     request_manager_names = ['request manager error',
                              'request manager how to',
-                             'request manager other',
-                             'request manager appointment']
+                             'request manager other']
     request_filter = "Request -"
     csv_file = "./example_01_support_requests.csv"
 
     # dates we are interested to read the supports from
-    max_date = datetime(2019, 11, 5)
+    max_date = datetime(2019, 11, 13)
     min_date = max_date - timedelta(2)
 
     # get all of the messages for that specific date range

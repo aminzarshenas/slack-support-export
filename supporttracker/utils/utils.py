@@ -43,7 +43,7 @@ def extract_user_id(user_id):
 
     :return: return user id in good format
     """
-    return user_id[2:-1]
+    return user_id[2:11]
 
 
 def timestamp_string_to_datetime(timestamp_string: str):
