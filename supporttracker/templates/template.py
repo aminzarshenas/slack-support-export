@@ -12,7 +12,11 @@ platform_ds_request_template_main = {
 platform_ds_request_template_thread = {
     "user": {
         "start": "\*From:\*",
-        "end": ":house:"
+        "end": "(:computer:|:house:|:speech_balloon:)"
+    },
+    "howto_category":{
+        "start": "\*Category:\*",
+        "end": ":speech_balloon:"
     },
     "tenant": {
         "start": "\*Tenant:\*",
